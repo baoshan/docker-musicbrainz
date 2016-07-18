@@ -19,6 +19,7 @@ ENV PGDATA="${DATA_ROOT}"/dbase
 ENV URL_ROOT="ftp://ftp.musicbrainz.org/pub/musicbrainz/data/fullexport"
 ENV POSTGRES_LOGS_FIFO="/var/run/s6/postgres-logs-fifo"
 ENV BABEL_DISABLE_CACHE="1"
+ENV MAX_WORKERS="1"
 
 # copy files required in build stage
 COPY prebuilds/ /defaults/
