@@ -79,6 +79,7 @@ RUN \
  cd /app/musicbrainz && \
 	cpanm MLEHMANN/Coro-6.49.tar.gz && \
 	cpanm --installdeps --notest . && \
+	cpanm --notest Starlet && \
 	npm install && \
 	./script/compile_resources.sh && \
 
