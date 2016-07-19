@@ -116,13 +116,11 @@ RUN \
 # add s6 overlay
  wget -O /tmp/s6.tar.gz \
 	https://github.com/just-containers/s6-overlay/releases/download/v1.17.2.0/s6-overlay-amd64.tar.gz && \
-	tar xvf /tmp/s6.tar.gz -C /
+	tar xvf /tmp/s6.tar.gz -C / && \
 
 # cleanup
-RUN \
  apt-get clean && \
- npm cache clean
-RUN \
+ npm cache clean && \
  rm -rfv /var/lib/apt/lists/* /root/.cpanm /root/.npm /tmp/*
 
 # add local files
