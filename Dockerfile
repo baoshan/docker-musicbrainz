@@ -121,7 +121,8 @@ RUN \
 # cleanup
 RUN \
  apt-get clean && \
- npm cache clean && \
+ npm cache clean
+RUN \
  rm -rfv /var/lib/apt/lists/* /root/.cpanm /root/.npm /tmp/*
 
 # add local files
